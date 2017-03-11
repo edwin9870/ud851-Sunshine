@@ -39,6 +39,6 @@
             android:layout_height="wrap_content"
             android:padding="16dp"
             android:textSize="29sp"
-            android:text="Republica Dominicana...." />
+            android:text="Republica Dominicana..q.." />
     </ScrollView>
 </FrameLayout>

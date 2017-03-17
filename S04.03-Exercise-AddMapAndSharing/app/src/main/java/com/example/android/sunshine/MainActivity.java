@@ -219,9 +219,18 @@ public class MainActivity extends AppCompatActivity implements ForecastAdapterOn
             mForecastAdapter.setWeatherData(null);
             loadWeatherData();
             return true;
-        }
+        } else if (id == R.id.mn_share_details) {
+            // TODO COMPLETED (2) Launch the map when the map menu item is clicked
+            String addressString = "Villa Faro";
+            Uri geoLocation = Uri.parse("geo:0,0?q=" + addressString);
 
-        // TODO (2) Launch the map when the map menu item is clicked
+            Intent intent = new Intent(Intent.ACTION_VIEW);
+            intent.setData(geoLocation);
+
+            if(intent.resolveActivity(getPackageManager()) != null) {
+                startActivity(intent);
+            }
+        }
 
         return super.onOptionsItemSelected(item);
     }
